@@ -8,7 +8,7 @@ const LeagueStandings = () => {
 
   const getStandings = () => {
     fetch(`https://api.football-data.org/v2/competitions/SA/standings`, {
-      headers: { "X-Auth-Token": "604b78a039154828b5a414079fc148a0" },
+      headers: { "X-Auth-Token": "0c37514e7081466d8daac3d5661dffc7" },
     })
     .then((res) => {
         return res.json()

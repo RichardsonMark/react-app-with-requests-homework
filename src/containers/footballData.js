@@ -3,9 +3,11 @@ import TeamSelector from '../components/teamSelector.js';
 import TeamInfo from '../components/teamInfo.js';
 import LeagueStandings from '../components/standings.js';
 import "leaflet/dist/leaflet.css";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, useMap, Map, Marker, Popup } from "react-leaflet";
 import * as ELG from "esri-leaflet-geocoder";
 import '../components/components.css';
+import MyMap2 from '../components/MyMap';
+
 
 
 const FootballContainer = () => {
@@ -34,6 +36,8 @@ const FootballContainer = () => {
     // console.log(teamlist);
     ;
 
+
+
     const handleTeamSelected = tla => {
         setSelectedTeam3LetterCode(tla)
       }
@@ -48,10 +52,12 @@ const FootballContainer = () => {
             <div className="teamchoice">
                 <h1>Football API! - Serie A</h1>
                 <h4>Choose a team from the list to find out more about them</h4>
-                <TeamSelector teamlist={teamlist} onTeamSelected={handleTeamSelected} onchange="showDiv('hidden_div', this)" />
-                <div className="hidden_div">
+                <TeamSelector teamlist={teamlist} onTeamSelected={handleTeamSelected} />
+                <div>
                 <TeamInfo teaminfo={selectedTeam}  />
-                < MyMap teamlist={selectedTeam} />
+                <h4>Stadium Map</h4>
+                < MyMap />
+                < MyMap2 />
                 </div>
             </div>
             <div className="standing">
@@ -60,9 +66,6 @@ const FootballContainer = () => {
         </>
     )
 
-
-    
-    
     
     function MyMap() {
       function Geocoder({ address }) {
@@ -92,7 +95,7 @@ const FootballContainer = () => {
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-           <Geocoder address={"Stadio olimpico"} />
+           <Geocoder address="piazzale lodovicio goisis, bergamo" />
 
         </MapContainer>
       );
