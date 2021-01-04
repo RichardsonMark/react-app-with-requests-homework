@@ -1,0 +1,66 @@
+#root main {
+    min-height: 550px;
+  }
+
+div.img {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img.ui.inline.image  {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.table {
+  margin-top: 0.5rem;
+  flex: 6;
+  margin-bottom: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.standing {
+  padding: 10px;
+  border: 1px solid #000055;
+  background-color: #009c3d;
+  max-width: 450px;
+  min-width: 220px;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 4px;
+}
+  
+.teamchoice {
+  padding: 10px;
+  border: 1px solid #000055;
+  background-color: #0064aa;
+  max-width: 450px;
+  min-width: 220px;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 4px;
+  color: #c8b67f;
+}  
+
+.map {
+  padding: 10px;
+  border: 1px solid #000055;
+  background-color: #0064aa;
+  max-width: 425px;
+  min-width: 220px;
+  margin: 0 auto;
+  align-items: center;
+  border-radius: 4px;
+  color: #c8b67f;
+}
+
+
+
+#hidden_div {
+  display: none;
+}
