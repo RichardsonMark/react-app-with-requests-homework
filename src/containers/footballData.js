@@ -19,7 +19,7 @@ const FootballContainer = () => {
     const getTeamList = () => {
         console.log("getting country list info...")
         fetch(`http://api.football-data.org/v2/competitions/SA/teams`, {
-            headers: {'X-Auth-Token': '0c37514e7081466d8daac3d5661dffc7'}
+            headers: {'X-Auth-Token': 'api_key'}
             })
             .then((res) => {
                 return res.json()
